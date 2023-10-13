@@ -124,7 +124,7 @@ function Pizza({ pizzaObj }) {
   //if (pizzaObj.soldOut) return null;
   return (
     // The following className was a regular string "pizza", but was changed to a template literal
-    // which apparently is JS, so we wrapped it in curly brackets, this was done in order to
+    // which apparently is JS, so we wrapped it in curly brackets, this was done in order to help with greyscaling the sold out pizza
     <li className={`pizza ${pizzaObj.soldOut ? "sold-out" : ""}`}>
       <img src={pizzaObj.photoName} alt={pizzaObj.name} />
 
