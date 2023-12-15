@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import { Menu } from "./Menu";
 
-const pizzaData = [
+export const pizzaData = [
   {
     name: "Focaccia",
     ingredients: "Bread with italian olive oil and rosemary",
@@ -67,7 +68,7 @@ function Header() {
   );
 }
 
-function Menu() {
+export function Menu() {
   const pizzas = pizzaData;
   const numPizzas = pizzas.length;
 
@@ -95,30 +96,30 @@ function Menu() {
 
       {/* When using a && conditional the first argument should never be a number, but rather something truthy or falsy(hence 'numPizzas > 0', and not just 'numPizzas') */}
       {/* {numPizzas > 0 && (
-        <ul className="pizzas">
-          {pizzaData.map((pizza) => (
-            <Pizza pizzaObj={pizza} key={pizza.name} />
-          ))}
-        </ul>
-      )} */}
+              <ul className="pizzas">
+                {pizzaData.map((pizza) => (
+                  <Pizza pizzaObj={pizza} key={pizza.name} />
+                ))}
+              </ul>
+            )} */}
 
       {/* <Pizza
-        name="Pizza Spinaci"
-        ingredients="Tomato, mozarella, spinach, and ricotta cheese"
-        photoName="pizzas/spinaci.jpg"
-        price={10}
-      />
-      <Pizza
-        name="Pizza Funghi"
-        ingredients="Tomato, mushrooms, onions"
-        price={12}
-        photoName="pizzas/funghi.jpg"
-      /> */}
+              name="Pizza Spinaci"
+              ingredients="Tomato, mozarella, spinach, and ricotta cheese"
+              photoName="pizzas/spinaci.jpg"
+              price={10}
+            />
+            <Pizza
+              name="Pizza Funghi"
+              ingredients="Tomato, mushrooms, onions"
+              price={12}
+              photoName="pizzas/funghi.jpg"
+            /> */}
     </main>
   );
 }
 
-function Pizza({ pizzaObj }) {
+export function Pizza({ pizzaObj }) {
   console.log(pizzaObj);
   // Demonstrating a 2nd return in the same component
   //if (pizzaObj.soldOut) return null;
